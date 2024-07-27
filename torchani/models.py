@@ -449,3 +449,15 @@ def ANI2x(periodic_table_index=False, model_index=None):
     if model_index is None:
         return BuiltinEnsemble._from_neurochem_resources(info_file, periodic_table_index)
     return BuiltinModel._from_neurochem_resources(info_file, periodic_table_index, model_index)
+
+
+def ANI1xnr(periodic_table_index=False, model_index=None):
+    """The ANI-1xnr model
+
+    Github Repo : https://github.com/atomistic-ml/ani-1xnr
+    Paper : http://dx.doi.org/10.1038/s41557-023-01427-3
+    """
+    info_file = 'ani-1xnr.info'
+    if model_index is None:
+        return BuiltinEnsemble._from_neurochem_resources(info_file, periodic_table_index)
+    return BuiltinModel._from_neurochem_resources(info_file, periodic_table_index, model_index)
